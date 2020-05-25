@@ -5,28 +5,16 @@ import tablice.sort.Sorter;
 public class Run {
 	
 	public  static void main(String[] args)  {
-		String imie = "Marcinek";
-		String[] imiona = {"Marcinek", "Nadia","Tomek", "Ania", "Rafik", "Piter"};
+
+		Person[] imiona = {
+				new Person("Marcinek","Bartosiewicz"),
+				new Person("Nadia","Bartosiewicz"),
+				new Person("Tomek","Bartosiewicz"),
+				new Person("Ania","Bartosiewicz"),
+				new Person("Rafik","Bartosiewicz"),
+				new Person("Piter","Domaga³a")};
 		
-		System.out.println(shouldBeChanged(imiona[0],imiona[3]));
-		if  (shouldBeChanged(imiona[0],imiona[3])){
-				String przechowywaczka = imiona[0];
-				imiona[0] = imiona[3];
-				imiona[3] = przechowywaczka;
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		for (int i=0; i<imiona.length; i++) {
 			System.out.println("imie "+(i+1)+" - "+imiona[i]);		
 		}

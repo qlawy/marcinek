@@ -6,7 +6,14 @@ public class NameSorter {
 
 	public static void main(String[] args) {
 
-		String[] imiona = { "Zenek","Nadia","Marian", "Marcinek", "Tomek", "Ania", "Rafik", "Piter","Adam" };
+		Person[] imiona = {
+				new Person("Marcinek","Bartosiewicz"),
+				new Person("Nadia","Grzêda"),
+				new Person("Tomek","Parasol"),
+				new Person("Ania","Lupa"),
+				new Person("Rafik","Psiñski"),
+				new Person("Piter","Domaga³a")};
+		
 		boolean czyCosSieZminilo= true;
 		while(czyCosSieZminilo) {
 			czyCosSieZminilo=sortuj(imiona);
@@ -15,13 +22,12 @@ public class NameSorter {
 		System.out.println(Arrays.asList(imiona));
 	}
 
-	private static boolean sortuj(String[] imiona) {
+	private static boolean sortuj(Person[] imiona) {
 		boolean czyCosZmianil = false; 
 		for (int i = 0; i < imiona.length - 1; i++) {
 			int k = i + 1;
-			System.out.println(shouldBeChanged(imiona[i], imiona[k]));
-			if (shouldBeChanged(imiona[i], imiona[k])) {
-				String przechowywaczka = imiona[i];
+			if (shouldBeChanged(imiona[i].getSurname(), imiona[k].getSurname())) {
+				Person przechowywaczka = imiona[i];
 				imiona[i] = imiona[k];
 				imiona[k] = przechowywaczka;
 				czyCosZmianil=true;
