@@ -6,13 +6,7 @@ public class NameSorter {
 
 	public static void main(String[] args) {
 
-		Person[] imiona = {
-				new Person("Marcinek","Bartosiewicz"),
-				new Person("Nadia","Grzêda"),
-				new Person("Tomek","Parasol"),
-				new Person("Ania","Lupa"),
-				new Person("Rafik","Psiñski"),
-				new Person("Piter","Domaga³a")};
+		Person[] imiona = PersonCreator.create();
 		
 		boolean czyCosSieZminilo= true;
 		while(czyCosSieZminilo) {
