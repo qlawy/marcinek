@@ -1,21 +1,21 @@
 package tablice;
 
-import java.time.Instant;
+import objects.Car;
 
 public class Person {
 	private String name; 
 	private String surname;
-	private Instant bornDate;
+	private  Car car;
 	
 	public Person(String name, String surname) {
 		this.name = name;
 		this.surname = surname;
 	}
 
-	public Person(String name, String surname, Instant bornDate) {
+	public Person(String name, String surname, Car car ) {
 		this.name = name;
 		this.surname = surname;
-		this.bornDate = bornDate;
+		this.car = car;
 	}
 
 	public String getName() {
@@ -24,14 +24,11 @@ public class Person {
 	public  String getSurname() {
 		return surname;
 	}
-	public void setBornDate(Instant bornDate) {
-		this.bornDate = bornDate;
-	}
-	public Instant getBornDate() {
-		return bornDate;
+	public Car getCar() {
+		return car;
 	}
 	
 	public String toString() {
-		return name + " " + surname; 
+		return name + " " + surname + " " + car; 
 	}
 }
